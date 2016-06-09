@@ -43,28 +43,28 @@ namespace NotDolls.Controllers
                                            user.Email,
                                            user.Created_Date,
                                            user.Location,
-                                       //    Figurines = String.Format("/api/Inventory?GeekId={0}", user.GeekId)
-                                       //};
+                                           Figurines = String.Format("/api/Inventory?GeekId={0}", user.GeekId)
+                                       };
 
-                                            Figurines = from geek in _context.Geek
-                                                        join inv in _context.Inventory
-                                                        on geek.GeekId equals inv.GeekId
-                                                        where inv.GeekId == geek.GeekId
-                                                        select new Inventory
-                                                        {
-                                                            InventoryId = inv.InventoryId,
-                                                            Name = inv.Name,
-                                                            InventoryDescription = inv.InventoryDescription,
-                                                            Price = inv.Price,
-                                                            Quantity = inv.Quantity,
-                                                            Height = inv.Height,
-                                                            Weight = inv.Weight,
-                                                            Year = inv.Year,
-                                                            Quality = inv.Quality,
-                                                            Sold = inv.Sold,
-                                                            CreatedDate = inv.CreatedDate
-                                                        }
-                                        };
+            //    Figurines = from geek in _context.Geek
+            //                join inv in _context.Inventory
+            //                on geek.GeekId equals inv.GeekId
+            //                where inv.GeekId == geek.GeekId
+            //                select new Inventory
+            //                {
+            //                    InventoryId = inv.InventoryId,
+            //                    Name = inv.Name,
+            //                    InventoryDescription = inv.InventoryDescription,
+            //                    Price = inv.Price,
+            //                    Quantity = inv.Quantity,
+            //                    Height = inv.Height,
+            //                    Weight = inv.Weight,
+            //                    Year = inv.Year,
+            //                    Quality = inv.Quality,
+            //                    Sold = inv.Sold,
+            //                    CreatedDate = inv.CreatedDate
+            //                }
+            //};
 
             if (users == null)
             {
